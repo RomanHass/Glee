@@ -1,0 +1,18 @@
+body {
+    @extend %DMSans-700;
+    font-size: 16px;
+    line-height: 1.4;
+    background-color: #fff;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.container--big {
+    max-width: 1800px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
