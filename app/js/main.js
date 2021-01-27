@@ -1,6 +1,6 @@
 $(function () {
 
-    $('.slider').slick({
+    $('.main-slider').slick({
         arrows: false,
         dots: true,
         speed: 1300,

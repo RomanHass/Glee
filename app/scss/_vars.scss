@@ -3,28 +3,14 @@ $title: #191919;
 $text: #243f4d;
 $bisque: #fcd7b6;
 $second: #7b7b7b;
+$footer-lead: #1F2044;
+$secondary-link: #436372;
+$orange: #ffa500;
 
-%DMSans-400 {
-    font-family: "DMSans-Regular", sans-serif;
-    font-weight: 400;
-}
-
-%DMSans-500 {
-    font-family: "DMSans-Medium", sans-serif;
-    font-weight: 500;
-}
-
-%DMSans-700 {
-    font-family: "DMSans-Bold", sans-serif;
-    font-weight: 700;
-}
-
-%Rubik-400 {
-    font-family: "Rubik-Regular", sans-serif;
-    font-weight: 400;
-}
-
-%Rubik-500 {
-    font-family: "Rubik-Medium", sans-serif;
-    font-weight: 600;
+@mixin line-clamp {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
