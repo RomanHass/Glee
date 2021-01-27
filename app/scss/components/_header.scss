@@ -62,13 +62,11 @@
             background-color: orange;
         }
 
-        &:active {
+        &:active,
+        &:focus {
             background-color: #a6a183;
         }
 
-        &:focus {
-            opacity: 0.5;
-        }
     }
 
     &__selected,
