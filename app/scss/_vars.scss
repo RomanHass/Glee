@@ -6,6 +6,7 @@ $second: #7b7b7b;
 $footer-lead: #1F2044;
 $secondary-link: #436372;
 $orange: #ffa500;
+$card-text: #262626;
 
 @mixin line-clamp {
     display: -webkit-box;
@@ -13,4 +14,12 @@ $orange: #ffa500;
     -webkit-box-orient: vertical;
     overflow: hidden;
     text-overflow: ellipsis;
+}
+
+@function max($numbers...) {
+    @return m#{a}x(#{$numbers});
+}
+
+@function min($numbers...) {
+    @return m#{i}n(#{$numbers});
 }

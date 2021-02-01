@@ -1,0 +1,24 @@
+.bottom-slider {
+    background-color: rgba($bisque, 0.2);
+    display: flex;
+    margin-bottom: 90px;
+    margin-top: -9%;
+
+    &__carousel {
+        max-width: 1036px;
+        display: flex;
+        margin: 0 auto;
+        padding: 260px 0 90px;
+    }
+
+    .slick-track {
+        display: flex;
+        align-items: center;
+    }
+
+    .slick-slide {
+        display: flex;
+        justify-content: center;
+    }
+
+}

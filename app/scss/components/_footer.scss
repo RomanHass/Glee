@@ -1,5 +1,5 @@
 .footer {
-    padding: 100px 0 45px;
+    padding-bottom: 45px;
     font-weight: 400;
     font-size: 14px;
     line-height: 2.3;
@@ -112,7 +112,7 @@
         line-height: 1.8;
     }
 
-    .form {
+    &__form {
         display: flex;
     }
 

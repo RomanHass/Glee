@@ -1,0 +1,27 @@
+.filter-list {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 80px;
+
+    &__item:not(:last-child) {
+        margin-right: 35px;
+    }
+
+    &__btn {
+        border: none;
+        background-color: transparent;
+        outline: transparent;
+        cursor: pointer;
+        color: #8b8b8b;
+        padding: 0;
+        transition: color 0.3s ease;
+
+        &:hover {
+            color: $title;
+        }
+    }
+
+    .mixitup-control-active {
+        color: $title;
+    }
+}

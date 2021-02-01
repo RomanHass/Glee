@@ -68,7 +68,7 @@
             top: 50%;
             right: 19px;
             transform: translateY(-50%);
-            background-image: url("../../images/slider/arrow.svg");
+            background-image: url("../../images/icons/arrow.svg");
             width: 22px;
             height: 9px;
         }
@@ -77,12 +77,11 @@
     &__furniture {
         position: relative;
         z-index: 2;
-    }
-
-    &__img {
         max-width: 640px;
         max-height: 265px;
     }
+
+    &__img {}
 
     .slick-dots {
         display: flex;

@@ -1,0 +1,107 @@
+.news {
+    position: relative;
+    z-index: 2;
+
+    &__title {
+        margin-bottom: 45px;
+        text-align: left;
+    }
+
+    &__wrapper {
+        position: relative;
+    }
+
+    &__link {
+        position: absolute;
+        top: 5%;
+        right: 0;
+        transform: translateY(-5%);
+        font-family: "DMSans", serif;
+        font-weight: 700;
+
+        span {
+            padding-left: 10px;
+        }
+
+        &:after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 0;
+            height: 2px;
+            background-color: $accent;
+            transition: width 0.3s ease;
+        }
+
+        &:hover:after,
+        &:focus:after {
+            width: 100%;
+        }
+
+        &:active {
+            color: $second;
+        }
+    }
+
+    &__list {
+        display: flex;
+        margin-right: -30px;
+    }
+
+    &__item {
+        flex: 0 1 33.333%;
+        margin-right: 30px;
+        display: flex;
+        flex-direction: column;
+        border-radius: 5px;
+        background-color: #fff;
+    }
+
+    &__img {
+        height: 250px;
+        background-position: center center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        position: relative;
+    }
+
+    &__descr {
+        position: absolute;
+        bottom: -5%;
+        left: 11%;
+        transform: translate(-11%, 5%);
+        padding: 6px 32px;
+        font-family: "Poppins", serif;
+        font-weight: 700;
+        font-size: 14px;
+        line-height: 1.5;
+        border-radius: 25px;
+        text-transform: uppercase;
+        background-color: $accent;
+        color: #fff;
+    }
+
+    &__text {
+        position: relative;
+        flex: 1;
+        max-width: 315px;
+        margin: 0 auto;
+        border-bottom: 1px solid #e0e0e0;
+        padding: 32px 38px 10px 6px;
+        margin-bottom: 10px;
+    }
+
+    &__post {
+        padding: 0 0 20px 33px;
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 2.5;
+        text-transform: uppercase;
+    }
+
+    &__data {
+        margin-right: 30px;
+    }
+
+}

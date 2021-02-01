@@ -45,6 +45,7 @@ body {
     &:active {
         background-color: $second;
         color: #eee;
+        top: 1px;
     }
 
     &:focus {

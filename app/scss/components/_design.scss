@@ -1,0 +1,98 @@
+.design {
+    margin-bottom: 115px;
+
+    &__title {
+        margin-bottom: 20px;
+    }
+
+    &__list {
+        display: grid;
+        grid-template-rows: repeat(2, 245px);
+        grid-template-columns: repeat(3, 370px);
+        gap: 35px 30px;
+    }
+
+    &__item {
+        position: relative;
+        background-color: #f8f8f8;
+        overflow: hidden;
+        border-radius: 5px;
+    }
+
+    &__content {
+        font-family: "DMSans", sans-serif;
+        font-weight: 700;
+        position: relative;
+        z-index: 2;
+        padding: 30px 0 0 35px;
+    }
+
+    &__lead {
+        max-width: 175px;
+        font-size: 20px;
+        @include line-clamp;
+    }
+
+    &__descr {
+        color: $accent;
+    }
+
+    &__img {
+        position: absolute;
+        z-index: 1;
+        bottom: 20%;
+        max-width: 313px;
+        max-height: 110px;
+
+        &--futniture--first {
+            right: -21%;
+            max-height: 178px;
+        }
+
+        &--futniture--second {
+            right: -12%;
+            max-height: 108px;
+        }
+
+        &--futniture--third {
+            right: 16%;
+            max-width: 112px;
+            max-height: 143px;
+        }
+
+        &--futniture--fourth {
+            right: -13%;
+            bottom: 14%;
+            max-width: 310px;
+            max-height: 135px;
+        }
+
+        &--futniture--fifth {
+            right: 9%;
+            bottom: 14%;
+            max-width: 142px;
+            max-height: 178px;
+        }
+
+        &--futniture--sixth {
+            right: -40%;
+            bottom: 14%;
+            max-width: 417px;
+        }
+    }
+
+    &__link {
+        position: absolute;
+        z-index: 2;
+        left: 0;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        display: block;
+        transition: all 0.3s ease;
+
+        &:hover {
+            box-shadow: inset 0 0 1px 10px $secondary-link;
+        }
+    }
+}
