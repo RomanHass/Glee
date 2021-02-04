@@ -1,89 +1,53 @@
 .features {
     background-color: #fef7f0;
 
-    &__items {
+    .Rectangle_1 {
+        background-color: rgba($bisque, 0.2);
+        opacity: 0.2;
+        position: absolute;
+        left: 75px;
+        top: 963px;
+        width: 1770px;
+        height: 171px;
+        z-index: 204;
+    }
+
+    &__list {
         display: flex;
     }
 
     &__item {
-        display: flex;
-        min-height: 170px;
-        align-items: center;
         position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
         flex: 0 1 33.333%;
+        min-height: 170px;
 
-        &:before {
-            content: "";
-            position: absolute;
-            width: 50px;
-            height: 50px;
-            display: block;
-            background-repeat: no-repeat;
-            background-size: contain;
-            top: 27%;
-            left: 20%;
-        }
-
-        &:after {
-            content: "";
-            position: absolute;
-            left: 25%;
-            top: 48%;
-            left: 26%;
-            top: 53%;
-            transform: translate(-26%, -53%);
-            width: 20px;
-            height: 20px;
-            background-color: rgba($accent, 0.34);
-            border-radius: 50%;
-        }
-
-        &--icon--first {
-            position: relative;
-
-            &:before {
-                background-image: url("../../images/features/01.svg");
-            }
-        }
-
-        &--icon--second {
-            position: relative;
+        &--line-vertical {
             border-left: 1px solid rgba($text, 0.1);
             border-right: 1px solid rgba($text, 0.1);
-
-            &:before {
-                background-image: url("../../images/features/02.svg");
-                top: 37%;
-            }
-
-            &:after {
-                left: 27%;
-            }
-        }
-
-        &--icon--third {
-            position: relative;
-
-            &:before {
-                background-image: url("../../images/features/03.svg");
-            }
-
-            &:after {
-                left: 27%;
-            }
         }
     }
 
     &__content {
+        position: relative;
         max-width: 215px;
         margin: 0 auto;
         padding: 15px 0;
     }
 
+    &__icon {
+        position: absolute;
+        display: inline-block;
+        left: -35%;
+        fill: $accent;
+    }
+
     &__lead {
         font-size: 18px;
-        line-height: 2.3;
         color: #414141;
+        @include line-clamp;
     }
 
     &__descr {
@@ -91,6 +55,8 @@
         font-weight: 400;
         line-height: 1.9;
         color: #585858;
+        @include line-clamp;
+        -webkit-line-clamp: 3;
 
         &--width--long {
             max-width: 215px;

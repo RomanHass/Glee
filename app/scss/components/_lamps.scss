@@ -1,0 +1,124 @@
+.lamps {
+
+    &__row {
+        display: flex;
+        margin-right: -30px;
+    }
+
+}
+
+.lamps-card {
+    padding: 80px 0;
+    flex: 0 1 50%;
+    margin-right: 30px;
+    background-color: rgba($bisque, 0.4);
+    display: flex;
+
+    &__img {
+        margin-left: auto;
+        margin-top: -20%;
+    }
+
+    &__picture {
+        max-width: 235px;
+        height: 405px;
+        object-fit: cover;
+    }
+
+    &__content {
+        margin-right: auto;
+        color: $text;
+
+        &--padding-first {
+            padding-left: 20px;
+        }
+
+        &--padding-second {
+            padding-left: 60px;
+        }
+    }
+
+    &__lead {
+        max-width: 250px;
+        margin-bottom: 20px;
+        font-family: "DMSans", sans-serif;
+        font-weight: 700;
+        font-size: 26px;
+        line-height: 1.3;
+        @include line-clamp;
+
+        &--small {
+            max-width: 240px;
+        }
+    }
+
+    &__descr {
+        max-width: 340px;
+        margin-bottom: 20px;
+        font-weight: 400;
+        line-height: 1.9;
+        @include line-clamp;
+        -webkit-line-clamp: 4;
+    }
+
+    &__btn {
+        position: relative;
+        display: block;
+        max-width: 180px;
+        padding: 19px 20px;
+        font-size: 15px;
+        border: 1px solid rgba(#b3b7b5, 0.4);
+        border-radius: 5px;
+        color: $secondary-link;
+        transition: box-shadow 0.5s ease;
+
+
+        &:before {
+            content: '';
+            position: absolute;
+            background-image: url('../images/icons/arrow-lamp.svg');
+            width: 22px;
+            height: 9px;
+            top: 50%;
+            right: 19px;
+            transform: translateY(-50%);
+        }
+
+        span {
+            position: relative;
+
+            &:before {
+                content: '';
+                position: absolute;
+                bottom: auto;
+                top: 0;
+                height: 0%;
+                width: 100%;
+                background: $secondary-link;
+                z-index: -1;
+                transition: all 0.3s ease;
+            }
+
+        }
+
+        &:hover {
+            color: #fff;
+            box-shadow: 0 0 10px 2px rgba(#000, 0.5);
+
+            span {
+                &:before {
+                    content: '';
+                    height: 100%;
+                    bottom: 0;
+                }
+            }
+        }
+
+        &:active {
+            box-shadow: 0 0 0 30px $accent inset;
+            position: relative;
+            top: 1px;
+        }
+    }
+
+}

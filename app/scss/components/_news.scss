@@ -7,16 +7,12 @@
         text-align: left;
     }
 
-    &__wrapper {
-        position: relative;
-    }
-
     &__link {
         position: absolute;
         top: 5%;
         right: 0;
         transform: translateY(-5%);
-        font-family: "DMSans", serif;
+        font-family: "DMSans", sans-serif;
         font-weight: 700;
 
         span {
@@ -34,14 +30,23 @@
             transition: width 0.3s ease;
         }
 
-        &:hover:after,
-        &:focus:after {
+        &:visited {
+            color: red;
+        }
+
+        &:focus:after,
+        &:hover:after {
             width: 100%;
         }
 
         &:active {
             color: $second;
         }
+
+    }
+
+    &__wrapper {
+        position: relative;
     }
 
     &__list {
@@ -52,18 +57,30 @@
     &__item {
         flex: 0 1 33.333%;
         margin-right: 30px;
-        display: flex;
-        flex-direction: column;
-        border-radius: 5px;
-        background-color: #fff;
     }
 
-    &__img {
-        height: 250px;
-        background-position: center center;
-        background-size: cover;
-        background-repeat: no-repeat;
+}
+
+.news-card {
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    max-width: 370px;
+    height: 100%;
+
+    &__image {
         position: relative;
+        transition: transform 0.3s ease;
+
+        &:hover {
+            transform: scale(1.1);
+        }
+    }
+
+    &__picture {
+        height: 250px;
+        object-fit: cover;
+        border-radius: 5px 5px 0 0;
     }
 
     &__descr {
@@ -72,7 +89,7 @@
         left: 11%;
         transform: translate(-11%, 5%);
         padding: 6px 32px;
-        font-family: "Poppins", serif;
+        font-family: "Poppins", sans-serif;
         font-weight: 700;
         font-size: 14px;
         line-height: 1.5;
@@ -83,13 +100,16 @@
     }
 
     &__text {
-        position: relative;
         flex: 1;
-        max-width: 315px;
-        margin: 0 auto;
+        margin: 0 30px;
         border-bottom: 1px solid #e0e0e0;
-        padding: 32px 38px 10px 6px;
+        padding: 32px 38px 10px 5px;
         margin-bottom: 10px;
+
+        p {
+            @include line-clamp;
+            -webkit-line-clamp: 4;
+        }
     }
 
     &__post {
@@ -102,6 +122,10 @@
 
     &__data {
         margin-right: 30px;
+    }
+
+    &__icon {
+        margin-right: 10px;
     }
 
 }
