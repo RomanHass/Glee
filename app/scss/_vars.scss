@@ -9,13 +9,7 @@ $orange: #ffa500;
 $card-text: #262626;
 $green-light: #49f1c0;
 
-@mixin line-clamp {
-    display: -webkit-box;
-    -webkit-line-clamp: 2;
-    -webkit-box-orient: vertical;
-    overflow: hidden;
-    text-overflow: ellipsis;
-}
+
 
 @function max($numbers...) {
     @return m#{a}x(#{$numbers});

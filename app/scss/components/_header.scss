@@ -1,10 +1,26 @@
 .header {
+    position: fixed;
+    width: 100%;
+    z-index: 50;
+    background-color: #fff;
     padding: 50px 0 45px;
+
+    @include r(1200) {
+        padding: 20px 0;
+    }
 }
 
 .logo {
     &__img {
         object-fit: contain;
+    }
+
+    @include r(1024) {
+        margin-bottom: 10px;
+    }
+
+    @include r(575) {
+        display: none;
     }
 }
 
@@ -12,13 +28,52 @@
     display: flex;
     justify-content: space-between;
 
-    &__list {
+    @include r(575) {
         display: flex;
+        flex-direction: column;
         align-items: center;
     }
 
-    &__item:not(:last-child) {
+    &__list {
+        display: flex;
+        align-items: center;
+
+        @include r(1024) {
+            transform: translateX(-200%);
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            height: 100vh;
+            background-color: #2a3140;
+            margin-right: 0;
+            transition: transform 0.5s ease;
+        }
+
+        &--active {
+            transform: translateX(0);
+            z-index: 2;
+        }
+    }
+
+    &__item {
         margin-right: 33px;
+
+        &:last-child {
+            margin-right: 0;
+        }
+
+        @include r(1200) {
+            margin-right: 25px;
+        }
+
+        @include r(1024) {
+            margin-right: 0;
+        }
     }
 
     &__link {
@@ -35,11 +90,27 @@
             display: inline-block;
             vertical-align: middle;
         }
+
+        @include r(1024) {
+            padding: 12px 0;
+            font-size: 22px;
+            color: #fff;
+            text-align: center;
+
+            &:hover {
+                color: #fff;
+            }
+        }
     }
 }
 
 .user {
     display: flex;
+
+    @include r(575) {
+        order: 1;
+        margin-bottom: 10px;
+    }
 
     &__btn {
         margin-right: 18px;
@@ -53,15 +124,24 @@
         outline: transparent;
         cursor: pointer;
         transition: background-color 0.3s ease;
+        z-index: 5;
 
         &--opacity {
             background-color: rgba($accent, 0.2);
+
+            @include r(1024) {
+                z-index: 0;
+
+            }
         }
 
         &:last-child {
             margin-right: 0;
         }
 
+        @include r(1024) {
+            margin-right: 10px;
+        }
     }
 
     &__link {
@@ -71,6 +151,10 @@
         height: 50px;
         background-color: $bisque;
         transition: background-color 0.3s ease;
+
+        @include r(1024) {
+            z-index: 0;
+        }
 
         &--heart {
             position: relative;
@@ -91,6 +175,10 @@
         &--cart {
             margin-right: 18px;
             border-radius: 0 25px 25px 0;
+
+            @include r(1024) {
+                margin-right: 10px;
+            }
         }
 
     }

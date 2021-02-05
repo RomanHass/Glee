@@ -20,7 +20,6 @@ $(function () {
     //     }
     // });
 
-
     $('.bottom-slider__carousel').slick({
         arrows: false,
         dots: false,
@@ -29,5 +28,10 @@ $(function () {
         autoplay: true,
         autoplaySpeed: 2000
     });
+
+    $('.user__btn--click').on('click', function() {
+        $('.menu__list').toggleClass('menu__list--active');
+        $('body').toggleClass('lock');
+    })
 
 });
