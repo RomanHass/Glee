@@ -8,9 +8,13 @@
     @include r(1200) {
         padding: 20px 0;
     }
+
+    @include r(1200) {
+        padding: 20px 0 10px;
+    }
 }
 
-.logo {
+.header__logo {
     &__img {
         object-fit: contain;
     }
@@ -109,7 +113,6 @@
 
     @include r(575) {
         order: 1;
-        margin-bottom: 10px;
     }
 
     &__btn {
@@ -131,8 +134,8 @@
 
             @include r(1024) {
                 z-index: 0;
-
             }
+
         }
 
         &:last-child {
@@ -222,6 +225,10 @@
     &__btn:hover,
     &__link:hover {
         background-color: orange;
+
+        @include r(992) {
+            background-color: $accent;
+        }
     }
 
     &__btn:active,

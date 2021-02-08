@@ -2,30 +2,58 @@
 
     &__row {
         display: flex;
-        margin-right: -30px;
+
+        @include r(1200) {
+            display: block;
+        }
     }
 
 }
 
 .lamps-card {
-    padding: 80px 0;
+    display: flex;
     flex: 0 1 50%;
     margin-right: 30px;
+    padding: 80px 0;
     background-color: rgba($bisque, 0.4);
-    display: flex;
+
+    @include r(1200) {
+        margin: 0 0 30px;
+        align-items: center;
+    }
+
+    @include r(575) {
+        display: block;
+    }
+
+    &:last-child {
+        margin-right: 0;
+    }
 
     &__img {
+        max-width: 235px;
+        max-height: 405px;
         margin-left: auto;
         margin-top: -20%;
+
+        @include r(1200) {
+            margin-top: 0;
+        }
+
+        @include r(575) {
+            max-width: 200px;
+            max-height: 350px;
+            margin: 0 auto 20px;
+        }
     }
 
     &__picture {
-        max-width: 235px;
-        height: 405px;
         object-fit: cover;
     }
 
     &__content {
+        max-width: 350px;
+        padding-right: 10px;
         margin-right: auto;
         color: $text;
 
@@ -35,25 +63,27 @@
 
         &--padding-second {
             padding-left: 60px;
+
+            @include r(1600) {
+                padding-left: 40px;
+            }
+
+            @include r(1200) {
+                padding-left: 20px;
+            }
         }
     }
 
     &__lead {
-        max-width: 250px;
         margin-bottom: 20px;
         font-family: "DMSans", sans-serif;
         font-weight: 700;
         font-size: 26px;
         line-height: 1.3;
         @include line-clamp;
-
-        &--small {
-            max-width: 240px;
-        }
     }
 
     &__descr {
-        max-width: 340px;
         margin-bottom: 20px;
         font-weight: 400;
         line-height: 1.9;
@@ -96,6 +126,10 @@
                 background: $secondary-link;
                 z-index: -1;
                 transition: all 0.3s ease;
+
+                @include r(992) {
+                    background-color: transparent;
+                }
             }
 
         }
@@ -103,6 +137,11 @@
         &:hover {
             color: #fff;
             box-shadow: 0 0 10px 2px rgba(#000, 0.5);
+
+            @include r(992) {
+                box-shadow: none;
+                color: $secondary-link;
+            }
 
             span {
                 &:before {

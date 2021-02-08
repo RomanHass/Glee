@@ -1,11 +1,10 @@
 .features {
     background-color: rgba($bisque, 0.2);
 
-
     &__list {
         display: flex;
 
-        @include r(768) {
+        @include r(767) {
             display: block;
         }
     }
@@ -18,7 +17,7 @@
         flex: 0 1 33.333%;
         min-height: 170px;
 
-        @include r(768) {
+        @include r(767) {
             display: block;
             text-align: center;
             min-height: 0;
@@ -73,7 +72,7 @@
         &--width--long {
             max-width: 215px;
 
-            @include r(768) {
+            @include r(767) {
                 max-width: 100%;
             }
         }

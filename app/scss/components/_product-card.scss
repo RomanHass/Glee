@@ -90,9 +90,15 @@
             }
         }
 
+        &:focus {
+            .product-card__icon {
+                fill: $red;
+            }
+        }
+
         &:active {
             .product-card__icon {
-                fill: red;
+                fill: $bisque;
             }
         }
 

@@ -48,6 +48,11 @@ body {
     &:hover {
         background-color: #ffa500;
         color: #000;
+
+        @include r(1024) {
+            background-color: $accent;
+            color: #fff;
+        }
     }
 
     &:active {

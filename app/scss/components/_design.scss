@@ -9,6 +9,23 @@
         display: grid;
         grid-template-columns: repeat(3, 370px);
         gap: 35px 30px;
+
+        @include r(1200) {
+            grid-template-columns: repeat(2, 370px);
+            justify-content: center;
+        }
+
+        @include r(1024) {
+            grid-template-columns: repeat(2, 354px);
+        }
+
+        @include r(767) {
+            grid-template-columns: repeat(1, 370px);
+        }
+
+        @include r(575) {
+            grid-template-columns: repeat(1, 290px);
+        }
     }
 
 }
@@ -65,6 +82,10 @@
 
         &:hover {
             box-shadow: inset 0 0 1px 10px $secondary-link;
+
+            @include r(1024) {
+                box-shadow: none;
+            }
         }
     }
 }

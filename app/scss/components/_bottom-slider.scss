@@ -1,10 +1,34 @@
 .bottom-slider {
-    background-color: rgba($bisque, 0.2);
-    margin-top: -9%;
+    position: relative;
+
+    &:before {
+        content: '';
+        position: absolute;
+        background-color: rgba($bisque, 0.2);
+        max-height: 435px;
+        height: 165%;
+        width: 100%;
+        top: -63%;
+
+        @include r(1024) {
+            top: -64%;
+        }
+
+        @include r(992) {
+            top: 0;
+            height: 100%;
+        }
+    }
+
 
     &__carousel {
-        padding: 260px 0 90px;
+        padding: 90px 0;
         margin-bottom: 95px;
+
+        @include r(992) {
+            margin-top: 0;
+            padding: 50px 0;
+        }
     }
 
     &__img {

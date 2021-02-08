@@ -9,6 +9,14 @@
     justify-content: center;
     margin-bottom: 105px;
 
+    @include r(767) {
+        min-height: 400px;
+    }
+
+    @include r(575) {
+        min-height: 350px;
+    }
+
     &:before,
     &::after {
         content: '';
@@ -23,6 +31,11 @@
 
     &:hover:before {
         background-color: $orange;
+
+        @include r(992) {
+            background-color: $accent;
+        }
+
     }
 
     &:active:before {

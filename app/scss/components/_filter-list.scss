@@ -5,7 +5,7 @@
     margin-bottom: 80px;
 
     @include r(575) {
-        margin-bottom: 60px;
+        margin-bottom: 40px;
     }
 
 
@@ -33,6 +33,11 @@
 
         &:hover {
             color: $title;
+
+            @include r(992) {
+                color: #8b8b8b;
+                ;
+            }
         }
     }
 
