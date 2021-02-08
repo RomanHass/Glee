@@ -1,10 +1,21 @@
+html,
 body {
+    height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
     font-family: 'Rubik', sans-serif;
     font-weight: 500;
     font-size: 16px;
     line-height: 1.4;
     color: $title;
     background-color: #fff;
+}
+
+.main {
+    flex-grow: 1;
 }
 
 .container {
@@ -21,6 +32,7 @@ body {
     font-family: "DMSans", sans-serif;
     font-weight: 700;
     font-size: 36px;
+    line-height: 1.2;
     color: $title;
     text-align: center;
 }
