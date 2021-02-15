@@ -17,6 +17,19 @@
         flex: 0 1 33.333%;
         min-height: 170px;
 
+        &:after {
+            content: '';
+            position: absolute;
+            right: 0;
+            width: 1px;
+            height: 100%;
+            background-color: rgba($text, 0.1);
+        }
+
+        &:last-child:after {
+            display: none;
+        }
+
         @include r(767) {
             display: block;
             text-align: center;
@@ -24,10 +37,6 @@
             padding: 15px 0;
         }
 
-        &--line-vertical {
-            border-left: 1px solid rgba($text, 0.1);
-            border-right: 1px solid rgba($text, 0.1);
-        }
     }
 
     &__content {

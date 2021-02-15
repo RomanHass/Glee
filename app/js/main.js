@@ -49,12 +49,12 @@ $(function () {
 
     let mixer1 = mixitup(mix_1, {
         selectors: {
-            control: '.products__btn'
+            control: '.products .filter-list__btn'
         }
     });
     let mixer2 = mixitup(mix_2, {
         selectors: {
-            control: '.design__btn'
+            control: '.design .filter-list__btn'
         }
     });
 

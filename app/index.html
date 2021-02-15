@@ -12,8 +12,8 @@
 <body>
     <header class="header">
         <div class="container  container--big">
-            <nav class="menu header__menu">
-                <a class="logo header__logo" href="#">
+            <nav class="header__menu menu">
+                <a class="header__logo  logo" href="#">
                     <img class="logo__img" src="images/logo.png" alt="Logo" width="146px" height="39px">
                 </a>
                 <ul class="menu__list">
@@ -37,28 +37,28 @@
                     </li>
                 </ul>
                 <div class="user">
-                    <button class="user__btn user__btn--opacity" type="button">
-                        <span class="sr-only">Search button</span>
+                    <button class="user__btn btn-circle user__btn--opacity" type="button">
+                        <span class="sr-only">Search link</span>
                         <svg class="user__icon" width="20" height="20">
                             <use xlink:href="images/sprite.svg#search"></use>
                         </svg>
                     </button>
-                    <a class="user__link user__link--heart" href="#">
-                        <span class="sr-only">Like product</span>
+                    <a class="user__link btn-circle user__link--heart" href="#">
+                        <span class="sr-only">Favorites</span>
                         <svg class="user__icon" width="18" height="16">
                             <use xlink:href="images/sprite.svg#heart"></use>
                         </svg>
                         <span class="user__num">0</span>
                     </a>
-                    <a class="user__link user__link--cart" href="#">
-                        <span class="sr-only">Cart product</span>
+                    <a class="user__link btn-circle user__link--cart" href="#">
+                        <span class="sr-only">Cart</span>
                         <svg class="user__icon" width="19" height="17">
                             <use xlink:href="images/sprite.svg#cart"></use>
                         </svg>
                         <span class="user__num user__num--cart">0</span>
                     </a>
-                    <button class="user__btn user__btn--click" type="button" type="button">
-                        <span class="sr-only">Additional menu button</span>
+                    <button class="user__btn btn-circle user__btn--click" type="button">
+                        <span class="sr-only">Menu</span>
                         <svg class="user__icon user__icon--color-white" width="20" height="20">
                             <use xlink:href="images/sprite.svg#cub"></use>
                         </svg>
@@ -67,6 +67,7 @@
             </nav>
         </div>
     </header>
+
     <main class="main">
         <h1 class="sr-only">Furniture store Glee</h1>
         <div class="container container--big">
@@ -149,7 +150,7 @@
                             </div>
                         </div>
                     </li>
-                    <li class="features__item features__item--line-vertical">
+                    <li class="features__item">
                         <div class="features__content">
                             <svg class="features__icon" width="54" height="53">
                                 <use xlink:href="images/sprite.svg#features-2"></use>
@@ -157,7 +158,7 @@
                             <span class="features__lead">
                                 Delivery.
                             </span>
-                            <div class="features__descr features__descr--width--long">
+                            <div class="features__descr">
                                 <p>
                                     Free shipping on all US order.
                                 </p>
@@ -185,21 +186,21 @@
         <section class="products">
             <div class="container">
                 <h2 class="products__title title">Products of the week</h2>
-                <ul class="filter-list">
+                <ul class="filter-list products-filter">
                     <li class="filter-list__item">
-                        <button class="filter-list__btn products__btn" data-filter="all">All</button>
+                        <button class="filter-list__btn" data-filter="all">All</button>
                     </li>
                     <li class="filter-list__item">
-                        <button class="filter-list__btn products__btn" data-filter=".category-a">Furnitures</button>
+                        <button class="filter-list__btn" data-filter=".category-a">Furnitures</button>
                     </li>
                     <li class="filter-list__item">
-                        <button class="filter-list__btn products__btn" data-filter=".category-b">Chairs</button>
+                        <button class="filter-list__btn" data-filter=".category-b">Chairs</button>
                     </li>
                     <li class="filter-list__item">
-                        <button class="filter-list__btn products__btn" data-filter=".category-c">Lighting</button>
+                        <button class="filter-list__btn" data-filter=".category-c">Lighting</button>
                     </li>
                     <li class="filter-list__item">
-                        <button class="filter-list__btn products__btn" data-filter=".category-d">Decor</button>
+                        <button class="filter-list__btn" data-filter=".category-d">Decor</button>
                     </li>
                 </ul>
                 <ul class="products__items">
@@ -207,24 +208,24 @@
                         <article class="product-card">
                             <ul class="product-card__link-box">
                                 <li class="product-card__item">
-                                    <a class="product-card__link" href="#">
-                                        <span class="sr-only">Search icon</span>
+                                    <a class="product-card__link btn-circle" href="#">
+                                        <span class="sr-only">Search link</span>
                                         <svg class="user__icon product-card__icon" width="20" height="20">
                                             <use xlink:href="images/sprite.svg#search"></use>
                                         </svg>
                                     </a>
                                 </li>
                                 <li class="product-card__item">
-                                    <button class="product-card__link">
-                                        <span class="sr-only">Cart icon</span>
+                                    <button class="product-card__link btn-circle">
+                                        <span class="sr-only">Cart</span>
                                         <svg class="user__icon product-card__icon" width="22" height="20">
                                             <use xlink:href="images/sprite.svg#cart"></use>
                                         </svg>
                                     </button>
                                 </li>
                                 <li class="product-card__item">
-                                    <button class="product-card__link">
-                                        <span class="sr-only">Like icon</span>
+                                    <button class="product-card__link btn-circle">
+                                        <span class="sr-only">Like</span>
                                         <svg class="user__icon product-card__icon" width="22" height="18">
                                             <use xlink:href="images/sprite.svg#heart"></use>
                                         </svg>
@@ -242,24 +243,24 @@
                         <article class="product-card">
                             <ul class="product-card__link-box">
                                 <li class="product-card__item">
-                                    <a class="product-card__link" href="#">
-                                        <span class="sr-only">Search icon</span>
+                                    <a class="product-card__link btn-circle" href="#">
+                                        <span class="sr-only">Search link</span>
                                         <svg class="user__icon product-card__icon" width="20" height="20">
                                             <use xlink:href="images/sprite.svg#search"></use>
                                         </svg>
                                     </a>
                                 </li>
                                 <li class="product-card__item">
-                                    <button class="product-card__link">
-                                        <span class="sr-only">Cart icon</span>
+                                    <button class="product-card__link btn-circle">
+                                        <span class="sr-only">Cart</span>
                                         <svg class="user__icon product-card__icon" width="22" height="20">
                                             <use xlink:href="images/sprite.svg#cart"></use>
                                         </svg>
                                     </button>
                                 </li>
                                 <li class="product-card__item">
-                                    <button class="product-card__link">
-                                        <span class="sr-only">Like icon</span>
+                                    <button class="product-card__link btn-circle">
+                                        <span class="sr-only">Like</span>
                                         <svg class="user__icon product-card__icon" width="22" height="18">
                                             <use xlink:href="images/sprite.svg#heart"></use>
                                         </svg>
@@ -277,24 +278,24 @@
                         <article class="product-card">
                             <ul class="product-card__link-box">
                                 <li class="product-card__item">
-                                    <a class="product-card__link" href="#">
-                                        <span class="sr-only">Search icon</span>
+                                    <a class="product-card__link btn-circle" href="#">
+                                        <span class="sr-only">Search link</span>
                                         <svg class="user__icon product-card__icon" width="20" height="20">
                                             <use xlink:href="images/sprite.svg#search"></use>
                                         </svg>
                                     </a>
                                 </li>
                                 <li class="product-card__item">
-                                    <button class="product-card__link">
-                                        <span class="sr-only">Cart icon</span>
+                                    <button class="product-card__link btn-circle">
+                                        <span class="sr-only">Cart</span>
                                         <svg class="user__icon product-card__icon" width="22" height="20">
                                             <use xlink:href="images/sprite.svg#cart"></use>
                                         </svg>
                                     </button>
                                 </li>
                                 <li class="product-card__item">
-                                    <button class="product-card__link">
-                                        <span class="sr-only">Like icon</span>
+                                    <button class="product-card__link btn-circle">
+                                        <span class="sr-only">Like</span>
                                         <svg class="user__icon product-card__icon" width="22" height="18">
                                             <use xlink:href="images/sprite.svg#heart"></use>
                                         </svg>
@@ -312,24 +313,24 @@
                         <article class="product-card">
                             <ul class="product-card__link-box">
                                 <li class="product-card__item">
-                                    <a class="product-card__link" href="#">
-                                        <span class="sr-only">Search icon</span>
+                                    <a class="product-card__link btn-circle" href="#">
+                                        <span class="sr-only">Search link</span>
                                         <svg class="user__icon product-card__icon" width="20" height="20">
                                             <use xlink:href="images/sprite.svg#search"></use>
                                         </svg>
                                     </a>
                                 </li>
                                 <li class="product-card__item">
-                                    <button class="product-card__link">
-                                        <span class="sr-only">Cart icon</span>
+                                    <button class="product-card__link btn-circle">
+                                        <span class="sr-only">Cart</span>
                                         <svg class="user__icon product-card__icon" width="22" height="20">
                                             <use xlink:href="images/sprite.svg#cart"></use>
                                         </svg>
                                     </button>
                                 </li>
                                 <li class="product-card__item">
-                                    <button class="product-card__link">
-                                        <span class="sr-only">Like icon</span>
+                                    <button class="product-card__link btn-circle">
+                                        <span class="sr-only">Like</span>
                                         <svg class="user__icon product-card__icon" width="22" height="18">
                                             <use xlink:href="images/sprite.svg#heart"></use>
                                         </svg>
@@ -347,24 +348,24 @@
                         <article class="product-card">
                             <ul class="product-card__link-box">
                                 <li class="product-card__item">
-                                    <a class="product-card__link" href="#">
-                                        <span class="sr-only">Search icon</span>
+                                    <a class="product-card__link btn-circle" href="#">
+                                        <span class="sr-only">Search link</span>
                                         <svg class="user__icon product-card__icon" width="20" height="20">
                                             <use xlink:href="images/sprite.svg#search"></use>
                                         </svg>
                                     </a>
                                 </li>
                                 <li class="product-card__item">
-                                    <button class="product-card__link">
-                                        <span class="sr-only">Cart icon</span>
+                                    <button class="product-card__link btn-circle">
+                                        <span class="sr-only">Cart</span>
                                         <svg class="user__icon product-card__icon" width="22" height="20">
                                             <use xlink:href="images/sprite.svg#cart"></use>
                                         </svg>
                                     </button>
                                 </li>
                                 <li class="product-card__item">
-                                    <button class="product-card__link">
-                                        <span class="sr-only">Like icon</span>
+                                    <button class="product-card__link btn-circle">
+                                        <span class="sr-only">Like</span>
                                         <svg class="user__icon product-card__icon" width="22" height="18">
                                             <use xlink:href="images/sprite.svg#heart"></use>
                                         </svg>
@@ -382,24 +383,24 @@
                         <article class="product-card">
                             <ul class="product-card__link-box">
                                 <li class="product-card__item">
-                                    <a class="product-card__link" href="#">
-                                        <span class="sr-only">Search icon</span>
+                                    <a class="product-card__link btn-circle" href="#">
+                                        <span class="sr-only">Search link</span>
                                         <svg class="user__icon product-card__icon" width="20" height="20">
                                             <use xlink:href="images/sprite.svg#search"></use>
                                         </svg>
                                     </a>
                                 </li>
                                 <li class="product-card__item">
-                                    <button class="product-card__link">
-                                        <span class="sr-only">Cart icon</span>
+                                    <button class="product-card__link btn-circle">
+                                        <span class="sr-only">Cart</span>
                                         <svg class="user__icon product-card__icon" width="22" height="20">
                                             <use xlink:href="images/sprite.svg#cart"></use>
                                         </svg>
                                     </button>
                                 </li>
                                 <li class="product-card__item">
-                                    <button class="product-card__link">
-                                        <span class="sr-only">Like icon</span>
+                                    <button class="product-card__link btn-circle">
+                                        <span class="sr-only">Like</span>
                                         <svg class="user__icon product-card__icon" width="22" height="18">
                                             <use xlink:href="images/sprite.svg#heart"></use>
                                         </svg>
@@ -417,24 +418,24 @@
                         <article class="product-card">
                             <ul class="product-card__link-box">
                                 <li class="product-card__item">
-                                    <a class="product-card__link" href="#">
-                                        <span class="sr-only">Search icon</span>
+                                    <a class="product-card__link btn-circle" href="#">
+                                        <span class="sr-only">Search link</span>
                                         <svg class="user__icon product-card__icon" width="20" height="20">
                                             <use xlink:href="images/sprite.svg#search"></use>
                                         </svg>
                                     </a>
                                 </li>
                                 <li class="product-card__item">
-                                    <button class="product-card__link">
-                                        <span class="sr-only">Cart icon</span>
+                                    <button class="product-card__link btn-circle">
+                                        <span class="sr-only">Cart</span>
                                         <svg class="user__icon product-card__icon" width="22" height="20">
                                             <use xlink:href="images/sprite.svg#cart"></use>
                                         </svg>
                                     </button>
                                 </li>
                                 <li class="product-card__item">
-                                    <button class="product-card__link">
-                                        <span class="sr-only">Like icon</span>
+                                    <button class="product-card__link btn-circle">
+                                        <span class="sr-only">Like</span>
                                         <svg class="user__icon product-card__icon" width="22" height="18">
                                             <use xlink:href="images/sprite.svg#heart"></use>
                                         </svg>
@@ -452,24 +453,24 @@
                         <article class="product-card">
                             <ul class="product-card__link-box">
                                 <li class="product-card__item">
-                                    <a class="product-card__link" href="#">
-                                        <span class="sr-only">Search icon</span>
+                                    <a class="product-card__link btn-circle" href="#">
+                                        <span class="sr-only">Search link</span>
                                         <svg class="user__icon product-card__icon" width="20" height="20">
                                             <use xlink:href="images/sprite.svg#search"></use>
                                         </svg>
                                     </a>
                                 </li>
                                 <li class="product-card__item">
-                                    <button class="product-card__link">
-                                        <span class="sr-only">Cart icon</span>
+                                    <button class="product-card__link btn-circle">
+                                        <span class="sr-only">Cart</span>
                                         <svg class="user__icon product-card__icon" width="22" height="20">
                                             <use xlink:href="images/sprite.svg#cart"></use>
                                         </svg>
                                     </button>
                                 </li>
                                 <li class="product-card__item">
-                                    <button class="product-card__link">
-                                        <span class="sr-only">Like icon</span>
+                                    <button class="product-card__link btn-circle">
+                                        <span class="sr-only">Like</span>
                                         <svg class="user__icon product-card__icon" width="22" height="18">
                                             <use xlink:href="images/sprite.svg#heart"></use>
                                         </svg>
@@ -492,7 +493,7 @@
                             <div class="lamps-card__img">
                                 <img class="lamps-card__picture" src="images/lamps/01.png" alt="Lamp">
                             </div>
-                            <div class="lamps-card__content lamps-card__content--padding-first">
+                            <div class="lamps-card__content">
                                 <h3 class="lamps-card__lead">
                                     Mirum Notare Tellus
                                 </h3>
@@ -501,14 +502,16 @@
                                         LEDCornBulb Lamp 5W 7W 10W 12W 15W E26 E27LEDCornLight
                                     </p>
                                 </div>
-                                <a class="lamps-card__btn" href="#"><span>View More</span></a>
+                                <a class="lamps-card__btn btn" href="#">
+                                    <span>View More</span>
+                                </a>
                             </div>
                         </article>
                         <article class="lamps-card">
                             <div class="lamps-card__img">
                                 <img class="lamps-card__picture" src="images/lamps/02.png" alt="Lamp">
                             </div>
-                            <div class="lamps-card__content lamps-card__content--padding-second">
+                            <div class="lamps-card__content">
                                 <h3 class="lamps-card__lead">
                                     Malesuada Tempor Euismod
                                 </h3>
@@ -517,31 +520,34 @@
                                         LEDCornBulb Lamp 5W 7W 10W 12W 15W E26 E27LEDCornLight
                                     </p>
                                 </div>
-                                <a class="lamps-card__btn" href="#"><span>View More</span></a>
+                                <a class="lamps-card__btn btn" href="#">
+                                    <span>View More</span>
+                                </a>
                             </div>
                         </article>
                     </div>
                 </div>
             </div>
         </section>
+
         <section class="design">
             <div class="container">
                 <h2 class="design__title title">New Design</h2>
-                <ul class="filter-list">
+                <ul class="filter-list design-filter">
                     <li class="filter-list__item">
-                        <button class="filter-list__btn design__btn" data-filter="all">All</button>
+                        <button class="filter-list__btn" data-filter="all">All</button>
                     </li>
                     <li class="filter-list__item">
-                        <button class="filter-list__btn design__btn" data-filter=".category-a">Furnitures</button>
+                        <button class="filter-list__btn" data-filter=".category-a">Furnitures</button>
                     </li>
                     <li class="filter-list__item">
-                        <button class="filter-list__btn design__btn" data-filter=".category-b">Chairs</button>
+                        <button class="filter-list__btn" data-filter=".category-b">Chairs</button>
                     </li>
                     <li class="filter-list__item">
-                        <button class="filter-list__btn design__btn" data-filter=".category-c">Lighting</button>
+                        <button class="filter-list__btn" data-filter=".category-c">Lighting</button>
                     </li>
                     <li class="filter-list__item">
-                        <button class="filter-list__btn design__btn" data-filter=".category-d">Decor</button>
+                        <button class="filter-list__btn" data-filter=".category-d">Decor</button>
                     </li>
                 </ul>
                 <ul class="design__list">
@@ -557,7 +563,7 @@
                                 <img class="design-card__picture" src="images/design/01.png" alt="Furniture image">
                             </div>
                             <a class="design-card__link" href="#">
-                                <span class="sr-only">First card with a picture of furniture</span>
+                                <span class="sr-only">Go to product</span>
                             </a>
                         </article>
                     </li>
@@ -565,7 +571,7 @@
                         <article class="design-card">
                             <div class="design-card__content">
                                 <h3 class="design-card__lead">
-                                    Rattan Rocking Chair
+                                    Lampe Sur Pieds Bamboo
                                 </h3>
                                 <span class="design-card__descr">Classic</span>
                             </div>
@@ -573,7 +579,7 @@
                                 <img class="design-card__picture" src="images/design/02.png" alt="Furniture image">
                             </div>
                             <a class="design-card__link" href="#">
-                                <span class="sr-only">Second card with a picture of furniture</span>
+                                <span class="sr-only">Go to product</span>
                             </a>
                         </article>
                     </li>
@@ -589,7 +595,7 @@
                                 <img class="design-card__picture" src="images/design/03.png" alt="Furniture image">
                             </div>
                             <a class="design-card__link" href="#">
-                                <span class="sr-only">Third card with a picture of furniture</span>
+                                <span class="sr-only">Go to product</span>
                             </a>
                         </article>
                     </li>
@@ -605,7 +611,7 @@
                                 <img class="design-card__picture" src="images/design/04.png" alt="Furniture image">
                             </div>
                             <a class="design-card__link" href="#">
-                                <span class="sr-only">Fourth card with a picture of furniture</span>
+                                <span class="sr-only">Go to product</span>
                             </a>
                         </article>
                     </li>
@@ -621,7 +627,7 @@
                                 <img class="design-card__picture" src="images/design/05.png" alt="Furniture image">
                             </div>
                             <a class="design-card__link" href="#">
-                                <span class="sr-only">Fifth card with a picture of furniture</span>
+                                <span class="sr-only">Go to product</span>
                             </a>
                         </article>
                     </li>
@@ -637,42 +643,47 @@
                                 <img class="design-card__picture" src="images/design/06.png" alt="Furniture image">
                             </div>
                             <a class="design-card__link" href="#">
-                                <span class="sr-only">Sixth card with a picture of furniture</span>
+                                <span class="sr-only">Go to product</span>
                             </a>
                         </article>
                     </li>
                 </ul>
             </div>
         </section>
+
         <div class="video" style="background-image: url('images/video/01.jpg');">
             <svg class="video__icon" width="22" height="25">
                 <use xlink:href="images/sprite.svg#play-icon"></use>
             </svg>
             <a class="video__link" href="https://youtu.be/mb8s4Hsqzyw" data-fancybox>
-                <span class="video sr-only"></span>
+                <span class="video sr-only">Play video</span>
             </a>
         </div>
+
         <section class="news">
             <div class="container">
                 <div class="news__wrapper">
-                    <h2 class="news__title title">Our Insights & Articles</h2>
-                    <a class="news__link" href="#">View All <span> ></span></a>
+                    <div class="news__inner">
+                        <h2 class="news__title title">Our Insights & Articles
+                        </h2>
+                        <a class="news__link" href="#">View All <span> ></span></a>
+                    </div>
                     <ul class="news__list">
                         <li class="news__item">
                             <article class="news-card">
-                                <span class="sr-only">First news card</span>
+                                <span class="sr-only">Go to product</span>
                                 <div class="news-card__image">
                                     <a class="news-card__link" href="#">
                                         <img class="news-card__picture" src="images/news/01.jpg" alt="Apartment image">
                                     </a>
-                                    <h3 class="news-card__descr">news</h3>
+                                    <span class="news-card__category">news</span>
                                 </div>
-                                <div class="news-card__text">
-                                    <p>
+                                <h3 class="news-card__heading">
+                                    <span>
                                         Diusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
                                         veniam
-                                    </p>
-                                </div>
+                                    </span>
+                                </h3>
                                 <div class="news-card__post">
                                     <span class="news-card__data">
                                         <svg class="news-card__icon" width="15" height="15">
@@ -690,20 +701,20 @@
                             </article>
                         </li>
                         <li class="news__item">
-                            <span class="sr-only">Second news card</span>
+                            <span class="sr-only">Go to product</span>
                             <article class="news-card">
                                 <div class="news-card__image">
                                     <a class="news-card__link" href="#">
                                         <img class="news-card__picture" src="images/news/02.jpg" alt="Apartment image">
                                     </a>
-                                    <h3 class="news-card__descr">news</h3>
+                                    <span class="news-card__category">news</span>
                                 </div>
-                                <div class="news-card__text">
-                                    <p>
+                                <h3 class="news-card__heading">
+                                    <span>
                                         Aonsectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
                                         dolore
-                                    </p>
-                                </div>
+                                    </span>
+                                </h3>
                                 <div class="news-card__post">
                                     <span class="news-card__data">
                                         <svg class="news-card__icon" width="15" height="15">
@@ -721,19 +732,19 @@
                             </article>
                         </li>
                         <li class="news__item">
+                            <span class="sr-only">Go to product</span>
                             <article class="news-card">
-                                <span class="sr-only">Third news card</span>
                                 <div class="news-card__image">
                                     <a class="news-card__link" href="#">
-                                        <img class="news-card__picture" src="images/news/03.jpg" alt="Apartment image">
+                                        <img class="news-card__picture" src="images/news/01.jpg" alt="Apartment image">
                                     </a>
-                                    <h3 class="news-card__descr">news</h3>
+                                    <span class="news-card__category">news</span>
                                 </div>
-                                <div class="news-card__text">
-                                    <p>
+                                <h3 class="news-card__heading">
+                                    <span>
                                         Rncididunt ut labore et dolore magna aliqua. Ut enim
-                                    </p>
-                                </div>
+                                    </span>
+                                </h3>
                                 <div class="news-card__post">
                                     <span class="news-card__data">
                                         <svg class="news-card__icon" width="15" height="15">
@@ -750,10 +761,12 @@
                                 </div>
                             </article>
                         </li>
+
                     </ul>
                 </div>
             </div>
         </section>
+
         <div class="bottom-slider">
             <div class="container">
                 <ul class="bottom-slider__carousel">
@@ -791,25 +804,26 @@
             </div>
         </div>
     </main>
+
     <footer class="footer">
         <div class="container">
             <div class="footer__top">
                 <div class="footer__column footer__column--flex">
                     <a class="footer__logo logo" href="#">
-                        <img class="logo__img" src="images/logo.png" alt="Logo">
+                        <img class="logo__img" src="images/logo.png" alt="Logo" width="146px" height="39px">
                     </a>
-                    <address class="footer__contacts">
+                    <address class="address">
                         <p>
                             <span>address:</span> 4772 Wines Lane
                             Houston, TX 77032
                         </p>
                         <p>
                             <span>Telephone:</span>
-                            <a class="footer__link" href="tel:+832-347-5843">+832-347-5843</a>
+                            <a class="footer__link link" href="tel:+832-347-5843">+832-347-5843</a>
                         </p>
                         <p>
                             <span>Email:</span>
-                            <a class="footer__link" href="mailto:contact@Glee.com">contact@Glee.com</a>
+                            <a class="footer__link link" href="mailto:contact@Glee.com">contact@Glee.com</a>
                         </p>
                     </address>
                 </div>
@@ -817,27 +831,27 @@
                     <span class="footer__lead">Services</span>
                     <ul class="footer__list">
                         <li class="footer__item">
-                            <a class="footer__link" href="#">
+                            <a class="footer__link link" href="#">
                                 About us
                             </a>
                         </li>
                         <li class="footer__item">
-                            <a class="footer__link" href="#">
+                            <a class="footer__link link" href="#">
                                 Return Policy
                             </a>
                         </li>
                         <li class="footer__item">
-                            <a class="footer__link" href="#">
+                            <a class="footer__link link" href="#">
                                 Our Blog
                             </a>
                         </li>
                         <li class="footer__item">
-                            <a class="footer__link" href="#">
+                            <a class="footer__link link" href="#">
                                 Contact Us
                             </a>
                         </li>
                         <li class="footer__item">
-                            <a class="footer__link" href="#">
+                            <a class="footer__link link" href="#">
                                 Terms & Condition
                             </a>
                         </li>
@@ -847,22 +861,22 @@
                     <span class="footer__lead">Account</span>
                     <ul class="footer__list">
                         <li class="footer__item">
-                            <a class="footer__link" href="#">
+                            <a class="footer__link link" href="#">
                                 Your Account
                             </a>
                         </li>
                         <li class="footer__item">
-                            <a class="footer__link" href="#">
+                            <a class="footer__link link" href="#">
                                 Checkout
                             </a>
                         </li>
                         <li class="footer__item">
-                            <a class="footer__link" href="#">
+                            <a class="footer__link link" href="#">
                                 Login
                             </a>
                         </li>
                         <li class="footer__item">
-                            <a class="footer__link" href="#">
+                            <a class="footer__link link" href="#">
                                 Register
                             </a>
                         </li>
@@ -889,16 +903,16 @@
                 <nav class="footer-menu">
                     <ul class="footer-menu__list">
                         <li class="footer-menu__item">
-                            <a class="footer-menu__link" href="#">Home</a>
+                            <a class="footer-menu__link link" href="#">Home</a>
                         </li>
                         <li class="footer-menu__item">
-                            <a class="footer-menu__link" href="#">About</a>
+                            <a class="footer-menu__link link" href="#">About</a>
                         </li>
                         <li class="footer-menu__item">
-                            <a class="footer-menu__link" href="#">Blog</a>
+                            <a class="footer-menu__link link" href="#">Blog</a>
                         </li>
                         <li class="footer-menu__item">
-                            <a class="footer-menu__link" href="#">Contact</a>
+                            <a class="footer-menu__link link" href="#">Contact</a>
                         </li>
                     </ul>
                 </nav>
