@@ -1,5 +1,5 @@
 .design {
-    margin-bottom: 105px;
+    margin-bottom: 115px;
 
     &__title {
         margin-bottom: 20px;
@@ -7,24 +7,24 @@
 
     &__list {
         display: grid;
-        grid-template-columns: repeat(3, 370px);
+        grid-template-columns: repeat(3, 1fr);
         gap: 35px 30px;
 
-        @include r(1200) {
-            grid-template-columns: repeat(2, 370px);
+        @include r(992) {
+            grid-template-columns: repeat(2, 270px);
             justify-content: center;
-        }
-
-        @include r(1024) {
-            grid-template-columns: repeat(2, 354px);
-        }
-
-        @include r(767) {
-            grid-template-columns: repeat(1, 370px);
+            gap: 35px 15px;
         }
 
         @include r(575) {
-            grid-template-columns: repeat(1, 290px);
+            display: block;
+        }
+
+    }
+
+    &__item {
+        @include r(575) {
+            margin-bottom: 30px;
         }
     }
 
@@ -38,12 +38,16 @@
     max-width: 370px;
     height: 250px;
 
+    @include r(575) {
+        max-width: 100%;
+    }
+
     &__content {
         font-family: "DMSans", sans-serif;
         font-weight: 700;
         position: relative;
         z-index: 2;
-        padding: 30px 0 0 35px;
+        padding: 35px 0 0 35px;
     }
 
     &__lead {

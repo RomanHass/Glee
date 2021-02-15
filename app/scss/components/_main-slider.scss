@@ -1,9 +1,4 @@
 .main-slider {
-    padding-top: 145px;
-
-    @include r(1200) {
-        padding-top: 90px;
-    }
 
     &__item {
         position: relative;
@@ -27,17 +22,7 @@
             top: 12%;
             z-index: 0;
 
-            @include r(1600) {
-                right: 1%;
-            }
-
             @include r(1200) {
-                top: 2%;
-                max-width: 500px;
-                max-height: 500px;
-            }
-
-            @include r(1024) {
                 display: none;
             }
         }
@@ -84,7 +69,7 @@
             font-size: 56px;
         }
 
-        @include r(768) {
+        @include r(767) {
             font-size: 46px;
         }
 
@@ -103,20 +88,14 @@
         @include line-clamp;
         -webkit-line-clamp: 4;
 
-        @include r(768) {
+        @include r(767) {
             max-width: 100%;
             margin-bottom: 25px;
         }
     }
 
     &__btn {
-        position: relative;
-        display: block;
         max-width: 200px;
-        padding: 20px 20px 19px 25px;
-        font-weight: 400;
-        font-size: 15px;
-        color: #fff;
 
         &::after {
             content: "";

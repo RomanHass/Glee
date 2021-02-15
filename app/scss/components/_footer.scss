@@ -1,5 +1,4 @@
 .footer {
-    padding-bottom: 45px;
     font-weight: 400;
     font-size: 14px;
     line-height: 2.3;
@@ -9,7 +8,7 @@
         display: flex;
         flex-wrap: wrap;
         justify-content: space-between;
-        padding-bottom: 65px;
+        padding-bottom: 70px;
         border-bottom: 1px solid #dae4e9;
 
         @include r(767) {
@@ -49,7 +48,7 @@
         }
     }
 
-    &__contacts {
+    .address {
         max-width: 195px;
         padding-top: 15px;
         line-height: 1.8;
@@ -69,12 +68,8 @@
         display: block;
 
         @include r(575) {
-            top: -30%;
+            top: -40%;
         }
-    }
-
-    &__address {
-        margin-bottom: 5px;
     }
 
     &__lead {
@@ -88,18 +83,6 @@
         text-transform: uppercase;
     }
 
-    &__link {
-        transition: color 0.3s ease;
-
-        &:hover {
-            color: #000;
-
-            @include r(992) {
-                color: inherit;
-            }
-        }
-    }
-
     &__text {
         max-width: 245px;
         margin-bottom: 30px;
@@ -110,7 +93,7 @@
     &__bottom {
         display: flex;
         justify-content: space-between;
-        padding-top: 30px;
+        padding-top: 25px;
 
         @include r(767) {
             padding-top: 0;
@@ -120,8 +103,6 @@
 
     &__copyright {
         line-height: 1.8;
-        @include line-clamp;
-        -webkit-line-clamp: 1;
     }
 
     .footer-form {
@@ -160,8 +141,6 @@
 
         &__btn {
             padding: 3px 17px;
-            font-family: "DMSans", sans-serif;
-            font-weight: 400;
         }
     }
 

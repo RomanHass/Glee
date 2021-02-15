@@ -8,18 +8,13 @@
         max-height: 435px;
         height: 165%;
         width: 100%;
-        top: -63%;
-
-        @include r(1024) {
-            top: -64%;
-        }
+        top: -62%;
 
         @include r(992) {
             top: 0;
             height: 100%;
         }
     }
-
 
     &__carousel {
         padding: 90px 0;

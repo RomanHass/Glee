@@ -6,7 +6,7 @@
 @import "global";
 
 
-
+// Homepage
 @import "components/header";
 @import "components/main-slider";
 @import "components/features";
@@ -19,3 +19,9 @@
 @import "components/news";
 @import "components/bottom-slider";
 @import "components/footer";
+
+// About
+@import "components/top";
+@import "components/mission";
+@import "components/advantages";
+@import "components/team";

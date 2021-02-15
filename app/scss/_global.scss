@@ -15,7 +15,12 @@ body {
 }
 
 .main {
+    padding-top: 145px;
     flex-grow: 1;
+
+    @include r(1200) {
+        padding-top: 80px;
+    }
 }
 
 .container {
@@ -35,6 +40,11 @@ body {
     line-height: 1.2;
     color: $title;
     text-align: center;
+
+    &--fs-rubik {
+        font-family: "Rubik", sans-serif;
+        font-weight: 300;
+    }
 }
 
 .sr-only {
@@ -49,7 +59,23 @@ body {
     border: 0;
 }
 
+.btn-circle {
+    position: relative;
+    height: 50px;
+    width: 50px;
+    padding: 0;
+    border: none;
+    border-radius: 50%;
+    outline: transparent;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
 .btn {
+    position: relative;
+    display: block;
+    padding: 19px 20px;
+    font-size: 15px;
     color: #fff;
     background-color: $accent;
     border: none;
@@ -76,6 +102,55 @@ body {
     &:focus {
         background-color: $second;
         color: #eee;
+    }
+}
+
+.link {
+    font-size: 14px;
+    font-family: "Rubik";
+    font-weight: 400;
+    line-height: 2.3;
+    color: $second;
+    transition: color 0.3s ease;
+
+    &:hover {
+        color: #000;
+
+        @include r(992) {
+            color: inherit;
+        }
+    }
+}
+
+.breadcrumbs {
+
+    &__list {
+        display: flex;
+        justify-content: center;
+    }
+
+    &__item:not(:last-child) {
+        margin-right: 20px;
+        position: relative;
+
+        &:after {
+            content: '/';
+            position: absolute;
+            right: -50%;
+            transform: translateX(-50%);
+            color: rgba(#222933, 0.4);
+        }
+    }
+
+    &__link {
+        color: rgba(#222933, 0.6);
+        line-height: 1.7;
+
+        &:hover {
+            @include r(992) {
+                color: rgba(#222933, 0.6);
+            }
+        }
     }
 }
 
