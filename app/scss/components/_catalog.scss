@@ -1,0 +1,99 @@
+.catalog {
+    padding: 120px 0;
+
+    &__inner {
+        display: flex;
+    }
+
+    &__filters {
+        max-width: 270px;
+        width: 100%;
+        margin-right: 30px;
+    }
+}
+
+.filter-category {
+    margin-bottom: 60px;
+
+    &__heading {
+        margin-bottom: 30px;
+    }
+
+    &__btn {
+        position: relative;
+        border-radius: 5px;
+        background-color: transparent;
+        outline: transparent;
+        border: none;
+        max-width: 270px;
+        width: 100%;
+        padding: 9px 23px 9px 15px;
+        text-align: left;
+        cursor: pointer;
+
+        &:after {
+            content: '>';
+            position: absolute;
+            right: 23px;
+
+        }
+
+        &:focus {
+            background-color: rgba($accent, 0.2);
+        }
+
+        &:hover {
+            background-color: rgba($accent, 0.2);
+        }
+    }
+}
+
+.filter-price {
+
+    &__heading {
+        margin-bottom: 35px;
+    }
+
+    &__cost {
+        display: flex;
+        font-weight: 400;
+        font-size: 14px;
+
+        &--margin-left {
+            margin-left: 180px;
+        }
+    }
+
+}
+
+.irs--flat .irs-line {
+    top: 6px;
+    height: 3px;
+    background-color: rgba(#a3bbc8, 0.6);
+    border-radius: 0;
+}
+
+.irs--flat .irs-handle {
+    top: 0px;
+    width: 15px;
+    height: 15px;
+    background-color: #a3bbc8;
+}
+
+.irs--flat .irs-bar {
+    top: 5px;
+    height: 4px;
+    background-color: $accent;
+}
+
+.irs--flat .irs-handle>i:first-child {
+    display: none;
+}
+
+.irs-from,
+.irs-to,
+.irs-single,
+.irs--flat .irs-min,
+.irs--flat .irs-max {
+    display: none;
+}

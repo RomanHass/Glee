@@ -1,0 +1,38 @@
+.breadcrumbs {
+
+    &__list {
+        display: flex;
+        justify-content: center;
+    }
+
+    &__item:not(:last-child) {
+        margin-right: 20px;
+        position: relative;
+
+        &:after {
+            content: '/';
+            position: absolute;
+            right: -50%;
+            transform: translateX(-50%);
+            color: rgba(#222933, 0.4);
+        }
+    }
+
+    &__link {
+        @extend .link;
+        color: rgba(#222933, 0.6);
+        line-height: 1.7;
+
+        &--disabled {
+            &:hover {
+                color: rgba(#222933, 0.6);
+            }
+        }
+
+        &:hover {
+            @include r(992) {
+                color: rgba(#222933, 0.6);
+            }
+        }
+    }
+}
