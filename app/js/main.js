@@ -44,23 +44,38 @@ $(function () {
     });
 
 // Mixitup
-    let mix_1 = document.querySelector('.products__items');
-    let mix_2 = document.querySelector('.design__list');
+    // let mix_1 = document.querySelector('.products__items');
+    // let mix_2 = document.querySelector('.design__list');
 
-    let mixer1 = mixitup(mix_1, {
-        selectors: {
-            control: '.products .filter-list__btn'
-        }
-    });
-    let mixer2 = mixitup(mix_2, {
-        selectors: {
-            control: '.design .filter-list__btn'
-        }
-    });
+    // let mixer1 = mixitup(mix_1, {
+    //     selectors: {
+    //         control: '.products .filter-list__btn'
+    //     }
+    // });
+    // let mixer2 = mixitup(mix_2, {
+    //     selectors: {
+    //         control: '.design .filter-list__btn'
+    //     }
+    // });
 
     $('.user__btn--click').on('click', function () {
         $('.menu__list').toggleClass('menu__list--active');
         $('body').toggleClass('lock');
     })
+
+    // Range slider
+    $('.filter-price__input').ionRangeSlider({
+        type: "double",
+        prefix: "$",
+        step: 0.01,
+        onStart: function (data) { 
+            $('.filter-price__from').text(data.from);
+            $('.filter-price__to').text(data.to);
+        },
+        onChange: function (data) {
+            $('.filter-price__from').text(data.from);
+            $('.filter-price__to').text(data.to);
+        },
+    });
 
 });
