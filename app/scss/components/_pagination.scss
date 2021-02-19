@@ -1,0 +1,38 @@
+.pagination {
+    display: flex;
+    justify-content: center;
+
+    &__list {
+        display: flex;
+    }
+
+    &__item {
+        &:not(:last-child) {
+            margin-right: 15px;
+        }
+    }
+
+    &__link {
+        padding: 15px 20px;
+        font-weight: 400;
+        line-height: 1.9;
+        color: $text;
+        border: 1px solid $accent;
+
+        &:focus {
+            background-color: $accent;
+            color: #fff;
+        }
+
+
+        &:hover {
+            background-color: $orange;
+        }
+
+        &:active {
+            background-color: $text;
+            color: #fff;
+        }
+
+    }
+}

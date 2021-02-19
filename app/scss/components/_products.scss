@@ -31,17 +31,17 @@
 
     &__items {
         display: grid;
-        grid-template-columns: repeat(4, 270px);
+        grid-template-columns: repeat(4, 1fr);
         gap: 40px 30px;
         justify-content: center;
         margin-bottom: 190px;
 
         @include r(1200) {
-            grid-template-columns: repeat(3, 270px);
+            grid-template-columns: repeat(3, 1fr);
         }
 
         @include r(992) {
-            grid-template-columns: repeat(2, 270px);
+            grid-template-columns: repeat(2, 1fr);
             gap: 40px 15px;
             margin-bottom: 100px;
         }

@@ -1,0 +1,37 @@
+.product-catalog {
+    padding: 120px 0;
+
+    @include r(767) {
+        padding: 60px 0;
+    }
+
+    &__inner {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    &__filters {
+        max-width: 270px;
+        width: 100%;
+        margin-right: 30px;
+
+        @include r(992) {
+            max-width: 100%;
+            margin-right: 0;
+        }
+    }
+}
+
+.filter-item {
+    @include r(992) {
+        width: 100%;
+    }
+}
+
+.product-catalog__bottom-slider {
+    &:before {
+        top: 0%;
+        height: 100%;
+    }
+}

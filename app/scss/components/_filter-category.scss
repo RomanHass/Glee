@@ -1,0 +1,39 @@
+.filter-category {
+    margin-bottom: 55px;
+
+    &__heading {
+        margin-bottom: 20px;
+    }
+
+    &__item {
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+        font-weight: 400;
+        text-align: left;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+
+        &:active {
+            color: $orange;
+        }
+
+        &:hover {
+            background-color: rgba($accent, 0.2);
+        }
+    }
+
+    &__trigger {
+        max-width: 270px;
+        width: 100%;
+        padding: 12px 23px 9px 15px;
+
+        &:after {
+            content: '>';
+            position: absolute;
+            right: 23px;
+        }
+
+    }
+}

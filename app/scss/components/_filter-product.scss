@@ -1,0 +1,68 @@
+.filter-product {
+    @include r(992) {
+        margin-bottom: 40px;
+    }
+
+    &__heading {
+        margin-bottom: 35px;
+    }
+
+    &__item {
+        display: flex;
+        margin-bottom: 20px;
+    }
+
+    &__image {
+        position: relative;
+        border: 2px solid #f2f2f2;
+        width: 70px;
+        height: 70px;
+    }
+
+    &__picture {
+        margin: 0 auto;
+        object-fit: contain;
+    }
+
+    &__link {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+    }
+
+    &__link-title {
+        transition: color 0.3s ease;
+
+        &:hover {
+            color: $red;
+        }
+    }
+
+    &__content {
+        max-width: 150px;
+        padding-left: 20px;
+        color: #333;
+    }
+
+    &__title {
+        padding-top: 5px;
+        margin-bottom: 10px;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 1.2;
+
+        @include line-clamp;
+    }
+
+    .jq-ry-container {
+        margin-bottom: 5px;
+        padding: 0;
+    }
+
+    &__price {
+        font-size: 15px;
+        line-height: 1.8;
+    }
+}

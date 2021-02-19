@@ -20,13 +20,20 @@
 @import "components/bottom-slider";
 @import "components/footer";
 
-// About
-@import "components/top";
+// Top-title / Breadcrumbs
+@import "components/top-title";
 @import "components/breadcrumbs";
+
+// About
 @import "components/mission";
 @import "components/advantages";
 @import "components/team";
 
 // product-1
-@import "components/catalog";
+@import "components/product-catalog";
 @import "components/product__cards";
+@import "components/filter-category";
+@import "components/filter-price";
+@import "components/filter-brand";
+@import "components/filter-product";
+@import "components/pagination";

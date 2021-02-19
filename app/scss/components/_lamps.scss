@@ -110,7 +110,7 @@
                 width: 100%;
                 background: $secondary-link;
                 z-index: -1;
-                transition: all 0.3s ease;
+                transition: background-color 0.3s ease;
 
                 @include r(992) {
                     background-color: transparent;

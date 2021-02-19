@@ -19,7 +19,7 @@
     }
 
     &__link {
-        @extend .link;
+        @extend %link;
         color: rgba(#222933, 0.6);
         line-height: 1.7;
 

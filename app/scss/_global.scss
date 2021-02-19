@@ -48,15 +48,15 @@ body {
 }
 
 .heading {
-    display: inline-block;
     position: relative;
-    font-size: 18px;
+    display: inline-block;
+    margin-bottom: 25px;
     font-family: "DM Sans", sans-serif;
-    font-weight: bold;
+    font-weight: 700;
+    font-size: 18px;
     line-height: 1.2;
     text-transform: uppercase;
     color: $text;
-
 
     &:after {
         content: '';
@@ -128,22 +128,6 @@ body {
     }
 }
 
-.link {
-    font-size: 14px;
-    font-family: "Rubik";
-    font-weight: 400;
-    line-height: 2.3;
-    color: $second;
-    transition: color 0.3s ease;
-
-    &:hover {
-        color: #000;
-
-        @include r(992) {
-            color: inherit;
-        }
-    }
-}
 
 @include r(1024) {
     body.lock {
