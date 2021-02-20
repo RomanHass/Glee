@@ -4,11 +4,10 @@
     &:before {
         content: '';
         position: absolute;
-        background-color: rgba($bisque, 0.2);
-        max-height: 435px;
-        height: 165%;
+        top: -65%;
         width: 100%;
-        top: -62%;
+        height: 165%;
+        background-color: rgba($bisque, 0.2);
 
         @include r(992) {
             top: 0;
@@ -41,6 +40,7 @@
     .slick-slide {
         display: flex;
         justify-content: center;
+        outline: transparent;
     }
 
     .slick-list {

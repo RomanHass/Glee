@@ -1,0 +1,185 @@
+.catalog {
+    padding: 115px 0 120px;
+
+    &__inner {
+        display: flex;
+    }
+
+    &__filters {
+        width: 270px;
+        margin-right: 30px;
+    }
+
+    &__content {}
+}
+
+.filter {
+
+    &__title {
+        position: relative;
+        display: inline-block;
+        margin-bottom: 25px;
+        font-family: "DM Sans", sans-serif;
+        font-weight: 700;
+        font-size: 18px;
+        line-height: 1.2;
+        text-transform: uppercase;
+        color: $text;
+
+
+        &:after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            right: -50px;
+            width: 38px;
+            height: 3px;
+            background-color: $accent;
+            transform: translateY(-50%);
+        }
+    }
+}
+
+.filter-category {
+    margin-bottom: 60px;
+
+    &__link {
+        @extend %trigger;
+        position: relative;
+        transition: background-color 0.3s ease, color 0.3s ease;
+
+        &:hover {
+            background-color: rgba($accent, 0.2);
+        }
+
+        &:active {
+            color: $orange;
+        }
+
+        &:before {
+            content: '>';
+            position: absolute;
+            right: 23px;
+        }
+    }
+
+}
+
+.filter-price {
+    margin-bottom: 80px;
+
+    &__cost {
+        display: flex;
+        justify-content: space-between;
+        font-size: 14px;
+        font-weight: 400;
+        position: relative;
+        top: -3px;
+    }
+
+    .irs--flat .irs-line {
+        top: 7px;
+        height: 3px;
+        background-color: rgba($accent, 0.66);
+        border-radius: 0;
+    }
+
+    .irs--flat .irs-bar {
+        top: 6px;
+        height: 5px;
+        background-color: $accent;
+    }
+
+    .irs--flat .irs-handle {
+        top: 0;
+        width: 15px;
+        height: 15px;
+        background-color: $accent;
+        cursor: pointer;
+    }
+
+    .irs--flat .irs-handle>i:first-child,
+    .irs--flat .irs-min,
+    .irs--flat .irs-max,
+    .irs--flat .irs-from,
+    .irs--flat .irs-to,
+    .irs--flat .irs-single {
+        display: none;
+    }
+
+}
+
+.filter-brand {
+    margin-bottom: 50px;
+
+
+    &__label {
+        cursor: pointer;
+    }
+
+    &__input {
+        @extend %checkbox-hidden;
+
+        &:checked+.filter-brand__checkbox {
+            background-color: rgba($accent, 0.2);
+        }
+    }
+
+    &__checkbox {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        @extend %trigger;
+    }
+}
+
+.filter-recent {
+
+    &__item {
+        display: flex;
+        margin-bottom: 20px;
+    }
+
+    &__image {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 70px;
+        height: 70px;
+        border: 1px solid #f2f2f2;
+    }
+
+    &__content {
+        max-width: 150px;
+        padding-left: 20px;
+        color: #333;
+    }
+
+    &__link {
+        margin-bottom: 10px;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 1.2;
+        @include line-clamp;
+        transition: color 0.3s ease;
+
+        &:hover {
+            color: $red;
+        }
+    }
+
+    &__picture {
+        object-fit: contain;
+    }
+
+    .star {
+        margin-bottom: 10px;
+        padding: 0;
+    }
+
+    &__price {
+        font-size: 15px;
+        line-height: 1.8;
+        font-weight: 400;
+    }
+}

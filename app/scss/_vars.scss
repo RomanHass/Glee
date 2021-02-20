@@ -41,6 +41,14 @@ $about-bg: #edf1f4;
     clip: rect(0, 0, 0, 0);
 }
 
+%trigger {
+    display: block;
+    padding: 0 23px 0 15px;
+    line-height: 2.7;
+    color: #243f4d;
+    border-radius: 5px;
+}
+
 @function max($numbers...) {
     @return m#{a}x(#{$numbers});
 }
