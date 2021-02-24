@@ -41,14 +41,14 @@
         }
 
         @include r(575) {
-            max-width: 200px;
-            max-height: 350px;
             margin: 0 auto 20px;
         }
     }
 
     &__picture {
-        object-fit: cover;
+        width: 200px;
+        height: 350px;
+        object-fit: contain;
     }
 
     &__content {
