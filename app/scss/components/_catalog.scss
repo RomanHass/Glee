@@ -1,16 +1,29 @@
 .catalog {
     padding: 115px 0 120px;
 
+    @include r(767) {
+        padding-top: 60px;
+    }
+
     &__inner {
         display: flex;
+
+        @include r(992) {
+            display: block;
+        }
     }
 
     &__filters {
-        width: 270px;
+        max-width: 270px;
+        width: 100%;
         margin-right: 30px;
-    }
 
-    &__content {}
+        @include r(992) {
+            max-width: 100%;
+            margin-bottom: 60px;
+        }
+
+    }
 
     &__slider {
         &:before {
@@ -119,7 +132,6 @@
 .filter-brand {
     margin-bottom: 50px;
 
-
     &__label {
         cursor: pointer;
     }
@@ -142,6 +154,10 @@
 
 .filter-recent {
 
+    &__title {
+        margin-bottom: 35px;
+    }
+
     &__item {
         display: flex;
         margin-bottom: 20px;
@@ -154,6 +170,7 @@
         width: 70px;
         height: 70px;
         border: 1px solid #f2f2f2;
+        position: relative;
     }
 
     &__content {
@@ -170,6 +187,18 @@
         @include line-clamp;
         transition: color 0.3s ease;
 
+        &--image {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 0;
+            position: absolute;
+            left: 0;
+            top: 0;
+            right: 0;
+            bottom: 0;
+        }
+
         &:hover {
             color: $red;
         }
@@ -180,8 +209,14 @@
     }
 
     .star {
-        margin-bottom: 10px;
+        margin-bottom: 7px;
         padding: 0;
+
+        svg {
+            &:not(:last-child) {
+                margin-right: 4px;
+            }
+        }
     }
 
     &__price {
@@ -192,8 +227,9 @@
 }
 
 .catalog-content {
+    width: 100%;
 
-    &__list {
+    &__filter {
         display: flex;
         align-items: center;
         margin-bottom: 30px;
@@ -237,4 +273,20 @@
             fill: $orange;
         }
     }
+}
+
+.catalog-box {
+    .products__items {
+        grid-template-columns: repeat(3, 1fr);
+        margin-bottom: 110px;
+
+        @include r(767) {
+            grid-template-columns: repeat(2, 270px);
+        }
+
+        @include r(575) {
+            margin-bottom: 80px;
+        }
+    }
+
 }

@@ -86,11 +86,31 @@ $(function () {
         readOnly: true
     });
 
+    $(".products__item-star").rateYo({
+        starWidth: "18px",
+        normalFill: "#d6d6d6",
+        ratedFill: "#ffcc00",
+        readOnly: true
+    });
+
     // Change button activity
     $('.catalog-content__btn').on('click', function () {
         $('.catalog-content__btn').removeClass('catalog-content__btn--active');
         $(this).addClass('catalog-content__btn--active');
     });
 
+    $('.button-list').on('click', function () {
+        $('.products__items').addClass('product-item--list')
+    });
+
+    $('.button-grid').on('click', function () {
+        $('.products__items').removeClass('product-item--list')
+    });
+
+    // Change link activity
+    $('.pagination__link').on('click', function () {
+        $('.pagination__link').removeClass('pagination__link--active');
+        $(this).addClass('pagination__link--active');
+    });
 
 });

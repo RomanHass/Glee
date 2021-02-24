@@ -82,7 +82,8 @@ body {
     border: 0;
 }
 
-.btn-circle {
+.btn-circle,
+.btn-square {
     position: relative;
     height: 50px;
     width: 50px;
@@ -92,6 +93,10 @@ body {
     outline: transparent;
     cursor: pointer;
     transition: background-color 0.3s ease;
+}
+
+.btn-square {
+    border-radius: 0;
 }
 
 .btn {
@@ -125,6 +130,39 @@ body {
     &:focus {
         background-color: $second;
         color: #eee;
+    }
+}
+
+.pagination {
+    display: flex;
+    justify-content: center;
+
+    &__item {
+        &:not(:last-child) {
+            margin-right: 15px;
+        }
+    }
+
+    &__link {
+        padding: 20px;
+        font-weight: 400;
+        line-height: 1.9;
+        color: $text;
+        border: 1px solid $accent;
+        transition: background-color 0.3s ease;
+
+        &:hover {
+            background-color: $orange;
+
+            @include r(992) {
+                background-color: $accent;
+            }
+        }
+
+        &--active {
+            color: #fff;
+            background-color: $accent;
+        }
     }
 }
 
