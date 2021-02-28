@@ -15,6 +15,13 @@
         }
     }
 
+    &--mini {
+        &:before {
+            top: 0;
+            height: 100%;
+        }
+    }
+
     &__carousel {
         padding: 90px 0;
         margin-bottom: 95px;

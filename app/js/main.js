@@ -44,20 +44,22 @@ $(function () {
     });
 
 // Mixitup
-    // let mix_1 = document.querySelector('.products__items');
-    // let mix_2 = document.querySelector('.design__list');
+    let mix_1 = document.querySelector('.products__items');
+    let mix_2 = document.querySelector('.design__list');
 
-    // let mixer1 = mixitup(mix_1, {
-    //     selectors: {
-    //         control: '.products .filter-list__btn'
-    //     }
-    // });
-    // let mixer2 = mixitup(mix_2, {
-    //     selectors: {
-    //         control: '.design .filter-list__btn'
-    //     }
-    // });
+    let mixer1 = mixitup(mix_1, {
+        selectors: {
+            control: '.products .filter-list__btn'
+        }
+    });
+    let mixer2 = mixitup(mix_2, {
+        selectors: {
+            control: '.design .filter-list__btn'
+        }
+    });
 
+
+    //  Menu burger
     $('.user__btn--click').on('click', function () {
         $('.menu__list').toggleClass('menu__list--active');
         $('body').toggleClass('lock');
