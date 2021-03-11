@@ -43,20 +43,7 @@ $(function () {
         ]
     });
 
-// Mixitup
-    let mix_1 = document.querySelector('.products__items');
-    let mix_2 = document.querySelector('.design__list');
 
-    let mixer1 = mixitup(mix_1, {
-        selectors: {
-            control: '.products .filter-list__btn'
-        }
-    });
-    let mixer2 = mixitup(mix_2, {
-        selectors: {
-            control: '.design .filter-list__btn'
-        }
-    });
 
 
     //  Menu burger
@@ -115,4 +102,19 @@ $(function () {
         $(this).addClass('pagination__link--active');
     });
 
+
+    // Mixitup
+    let mix_1 = document.querySelector('.products__items');
+    let mix_2 = document.querySelector('.design__list');
+
+    let mixer1 = mixitup(mix_1, {
+        selectors: {
+            control: '.products .filter-list__btn'
+        }
+    });
+    let mixer2 = mixitup(mix_2, {
+        selectors: {
+            control: '.design .filter-list__btn'
+        }
+    });
 });
