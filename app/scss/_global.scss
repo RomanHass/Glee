@@ -47,29 +47,6 @@ body {
     font-weight: 300;
 }
 
-.heading {
-    position: relative;
-    display: inline-block;
-    margin-bottom: 25px;
-    font-family: "DM Sans", sans-serif;
-    font-weight: 700;
-    font-size: 18px;
-    line-height: 1.2;
-    text-transform: uppercase;
-    color: $text;
-
-    &:after {
-        content: '';
-        position: absolute;
-        right: -50px;
-        top: 50%;
-        transform: translateY(-50%);
-        width: 38px;
-        height: 3px;
-        background-color: $accent;
-    }
-}
-
 .sr-only {
     position: absolute;
     width: 1px;
@@ -133,42 +110,24 @@ body {
     }
 }
 
-.pagination {
-    display: flex;
-    justify-content: center;
+.overlay {
+    display: none;
 
-    &__item {
-        &:not(:last-child) {
-            margin-right: 15px;
-        }
-    }
-
-    &__link {
-        padding: 20px;
-        font-weight: 400;
-        line-height: 1.9;
-        color: $text;
-        border: 1px solid $accent;
-        transition: background-color 0.3s ease;
-
-        &:hover {
-            background-color: $orange;
-
-            @include r(992) {
-                background-color: $accent;
-            }
-        }
-
-        &--active {
-            color: #fff;
-            background-color: $accent;
-        }
+    &--active {
+        position: fixed;
+        left: 0;
+        top: 0;
+        display: block;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.5);
+        z-index: 50;
     }
 }
 
 
-@include r(1024) {
-    body.lock {
-        overflow: hidden;
-    }
+.lock {
+    overflow: hidden;
+
+    @include r(1024) {}
 }

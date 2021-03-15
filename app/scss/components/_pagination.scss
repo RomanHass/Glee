@@ -1,0 +1,36 @@
+.pagination {
+    display: flex;
+    justify-content: center;
+
+    &__item {
+        &:not(:last-child) {
+            margin-right: 15px;
+        }
+    }
+
+    &__link {
+        padding: 14px 20px;
+        font-weight: 400;
+        color: $text;
+        border: 1px solid $accent;
+        transition: background-color 0.3s ease;
+        cursor: pointer;
+
+        &:hover {
+            background-color: $orange;
+
+            @include r(992) {
+                background-color: $accent;
+            }
+        }
+
+        &:active {
+            background-color: $bisque;
+        }
+
+        &--active {
+            color: #fff;
+            background-color: $accent;
+        }
+    }
+}

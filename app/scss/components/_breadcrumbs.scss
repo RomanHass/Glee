@@ -34,5 +34,9 @@
                 color: rgba(#222933, 0.6);
             }
         }
+
+        &:active {
+            color: $accent;
+        }
     }
 }

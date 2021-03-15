@@ -124,6 +124,11 @@
             .product-card__icon {
                 fill: #fff;
             }
+
+            @include r(992) {
+                background-color: $accent;
+                transition: fill 0.3s ease;
+            }
         }
 
         &:focus {
@@ -142,5 +147,17 @@
 
     &__icon {
         fill: $accent;
+    }
+
+    &__content {
+        text-align: center;
+    }
+
+    &__star {
+        display: none;
+    }
+
+    &__descr {
+        display: none;
     }
 }
