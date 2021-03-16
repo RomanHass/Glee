@@ -1,7 +1,3 @@
-
-
-    
-
 $(function () {
 
     // Main slider
@@ -45,8 +41,6 @@ $(function () {
             }
         ]
     });
-
- 
 
     // Range slider
     $('.filter-price__input').ionRangeSlider({
@@ -115,12 +109,12 @@ $(function () {
     });
 });
 
-    // FIlter open
-    const open = document.querySelector('.catalog-box__btn'),
-    filter = document.querySelector('.filter'),
-    close = document.querySelector('.filter__close'),
-    lock = document.querySelector('.overlay'),
-    bodyLock = document.querySelector('body');
+// FIlter open
+const open = document.querySelector('.catalog-box__btn'),
+filter = document.querySelector('.filter'),
+close = document.querySelector('.filter__close'),
+lock = document.querySelector('.overlay'),
+bodyLock = document.querySelector('body');
 
 open.addEventListener('click', () => {
   filter.classList.add('filter--active');
